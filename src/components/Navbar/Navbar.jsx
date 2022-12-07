@@ -1,0 +1,88 @@
+import React from "react";
+import logo from "../../assets/images/logo.png";
+
+const Navbar = () => {
+  return (
+    <nav className='navbar navbar-expand-lg bg-light px-2 sm:px-5'>
+      <div className='container-fluid justify-content-between'>
+        <a className='navbar-brand w-25' href='#'>
+          <img src={logo} alt='' />
+        </a>
+        <button
+          className='navbar-toggler'
+          type='button'
+          data-bs-toggle='collapse'
+          data-bs-target='#navbarTogglerDemo02'
+          aria-controls='navbarTogglerDemo02'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+        >
+          <span className='navbar-toggler-icon'></span>
+        </button>
+        <div
+          className='collapse navbar-collapse justify-content-between w-50'
+          id='navbarTogglerDemo02'
+        >
+          <form className='d-flex w-50 ms-5' role='search'>
+            <input
+              className='form-control me-2 rounded-pill'
+              type='search'
+              placeholder='Search'
+              aria-label='Search'
+            />
+          </form>
+          <div>
+            <p
+              type='button'
+              className='fw-semibold mt-3 mt-lg-none'
+              data-bs-toggle='modal'
+              data-bs-target='#exampleModal'
+            >
+              Create account. <span className='text-primary'>It's free</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className='modal fade'
+          id='exampleModal'
+          tabIndex='-1'
+          aria-labelledby='exampleModalLabel'
+          aria-hidden='true'
+        >
+          <div className='modal-dialog modal-dialog-centered'>
+            <div className='modal-content'>
+              <div className='modal-header'>
+                <h1 className='modal-title fs-5' id='exampleModalLabel'>
+                  Modal title
+                </h1>
+                <button
+                  type='button'
+                  className='btn-close'
+                  data-bs-dismiss='modal'
+                  aria-label='Close'
+                ></button>
+              </div>
+              <div className='modal-body'>...</div>
+              <div className='modal-footer'>
+                <button
+                  type='button'
+                  className='btn btn-secondary'
+                  data-bs-dismiss='modal'
+                >
+                  Close
+                </button>
+                <button type='button' className='btn btn-primary'>
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
