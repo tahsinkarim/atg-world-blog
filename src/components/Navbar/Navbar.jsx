@@ -6,8 +6,8 @@ import RegisterModal from "../Login/RegisterModal";
 
 const Navbar = () => {
   return (
-    <nav className='navbar navbar-expand-lg bg-light px-2 sm:px-5'>
-      <div className='container-fluid justify-content-between'>
+    <nav className='navbar navbar-expand-lg bg-light px-2 sm:px-5 '>
+      <div className='container justify-content-between'>
         <a className='navbar-brand w-25' href='#'>
           <img src={logo} alt='' />
         </a>

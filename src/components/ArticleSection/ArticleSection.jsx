@@ -6,7 +6,7 @@ import MeetupCard from "../MeetupCard/MeetupCard";
 
 const ArticleSection = () => {
   return (
-    <div className='mt-4 mb-5 col-8'>
+    <div className='mt-4 mb-5 col-12 col-lg-8'>
       <ArticleCard></ArticleCard>
       <EducationCard></EducationCard>
       <MeetupCard></MeetupCard>
