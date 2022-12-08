@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
 import LoginModal from "../Login/LoginModal";
+import RegisterModal from "../Login/RegisterModal";
 
 const Navbar = () => {
   return (
@@ -37,7 +38,7 @@ const Navbar = () => {
               type='button'
               className='fw-semibold mt-3 mt-lg-none'
               data-bs-toggle='modal'
-              data-bs-target='#loginModal'
+              data-bs-target='#registerModal'
             >
               Create account. <span className='text-primary'>It's free</span>
             </p>
@@ -45,6 +46,7 @@ const Navbar = () => {
         </div>
       </div>
       <LoginModal></LoginModal>
+      <RegisterModal></RegisterModal>
     </nav>
   );
 };

@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
+import ArticleSection from "./components/ArticleSection/ArticleSection";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
       <header>
         <Navbar></Navbar>
       </header>
-      <main></main>
+      <main>
+        <ArticleSection></ArticleSection>
+      </main>
     </>
   );
 }

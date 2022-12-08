@@ -3,20 +3,23 @@ import fb from "../../assets/images/fb-logo.png";
 import google from "../../assets/images/gmail-logo.png";
 import login from "../../assets/images/login-img.png";
 
-const LoginModal = () => {
+const RegisterModal = () => {
   return (
     <div>
       <div
         className='modal fade'
-        id='loginModal'
+        id='registerModal'
         tabIndex='-1'
-        aria-labelledby='loginModalLabel'
+        aria-labelledby='registerModalLabel'
         aria-hidden='true'
       >
         <div className='modal-dialog modal-lg modal-dialog-centered align-items-end align-items-sm-center mx-0 mx-sm-auto mt-4 mt-sm-2'>
           <div className='modal-content '>
             <div className='modal-header bg-success bg-opacity-10 text-success py-3 d-none d-lg-flex'>
-              <h3 className='modal-title fs-6 text-center' id='loginModalLabel'>
+              <h3
+                className='modal-title fs-6 text-center'
+                id='registerModalLabel'
+              >
                 Let's learn, share & inspire each other with our passion for
                 computer engineering. Sign up now 🤘🏼
               </h3>
@@ -31,7 +34,7 @@ const LoginModal = () => {
               <div className='row mt-1'>
                 {/* Login Form */}
                 <div className='px-3 col ms-2'>
-                  <h2 className='fw-bold fs-4 mb-4 mt-1 ms-1 d-flex justify-content-between align-items-center'>
+                  <h2 className='fw-bold fs-4 mb-4 ms-1 d-flex justify-content-between align-items-center'>
                     <p className='mb-0'>Create an account</p>
                     <div className='d-lg-none'>
                       <button
@@ -44,30 +47,50 @@ const LoginModal = () => {
                     </div>
                   </h2>
                   <div className='row mx-1'>
+                    <div className='col pe-0 ps-0 d-flex border rounded-top'>
+                      <input
+                        type='text'
+                        className='form-control border-0 border-end rounded-top py-2'
+                        placeholder='First name'
+                        aria-label='First name'
+                      />
+                      <input
+                        type='text'
+                        className='form-control border-0 border-start rounded-top py-2'
+                        placeholder='Last name'
+                        aria-label='Last name'
+                      />
+                    </div>
                     <input
                       type='email'
-                      className='form-control rounded-0 rounded-top py-2 border-bottom-0'
+                      className='form-control rounded-0 border-top-0 py-2'
                       placeholder='Email'
                       aria-label='email'
                     />
                     <input
                       type='password'
-                      className='form-control rounded-0 rounded-bottom py-2'
+                      className='form-control rounded-0 border-top-0 py-2'
                       placeholder='Password'
                       aria-label='Password'
                     />
+                    <input
+                      type='password'
+                      className='form-control rounded-0 rounded-bottom border-top-0 py-2'
+                      placeholder='Confirm Password'
+                      aria-label='Confirm Password'
+                    />
                   </div>
                   <div className='d-flex d-sm-block align-items-center justify-content-between'>
-                    <div className='btn btn-primary rounded-5 d-flex justify-content-center mt-4 mb-4 mx-1 fw-semibold py-2 px-5'>
-                      Sign In
+                    <div className='btn btn-primary rounded-5 d-flex justify-content-center mt-3 mb-4 mx-1 fw-semibold py-2 px-5'>
+                      Create Account
                     </div>
                     <button
                       type='button'
                       data-bs-toggle='modal'
-                      data-bs-target='#registerModal'
-                      className='fw-semibold text-muted cursor-pointer border-0 bg-white d-lg-none'
+                      data-bs-target='#loginModal'
+                      className='fw-semibold text-muted cursor-pointer border-0 bg-white d-sm-none'
                     >
-                      <u>or, Create Account</u>
+                      <u>or, Sign In</u>
                     </button>
                   </div>
                   <div className='btn btn-light border rounded-1 d-flex justify-content-center align-items-center mt-3 mb-2 mx-1 fw-semibold py-2'>
@@ -78,27 +101,27 @@ const LoginModal = () => {
                     <img className='h-75 me-2' src={google} alt='' />
                     <span>Sign up with Google</span>
                   </div>
-                  <div>
-                    <p className='fw-semibold text-center'>Forgot Password?</p>
-                  </div>
                 </div>
                 {/* Login Image */}
                 <div className='col d-none flex-column align-items-center me-2 d-lg-flex'>
                   <p
                     type='button'
                     data-bs-toggle='modal'
-                    data-bs-target='#registerModal'
+                    data-bs-target='#loginModal'
                     className='text-right'
                   >
-                    Don't have an account yet?
-                    <span className='text-primary fw-semibold'>
-                      {" "}
-                      Create new for free
-                    </span>
+                    Already have an account?
+                    <span className='text-primary fw-semibold'> Sign In</span>
                   </p>
                   <div>
                     <img src={login} alt='' />
                   </div>
+                  <p className='fs-6 d-block'>
+                    <small>
+                      By signing up, you agree to our Terms & conditions,
+                      Privacy policy
+                    </small>
+                  </p>
                 </div>
               </div>
             </div>
@@ -109,4 +132,4 @@ const LoginModal = () => {
   );
 };
 
-export default LoginModal;
+export default RegisterModal;
