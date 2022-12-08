@@ -8,18 +8,15 @@ const LoginModal = () => {
     <div>
       <div
         className='modal fade'
-        id='exampleModal'
+        id='loginModal'
         tabIndex='-1'
-        aria-labelledby='exampleModalLabel'
+        aria-labelledby='loginModalLabel'
         aria-hidden='true'
       >
-        <div className='modal-dialog modal-lg modal-dialog-centered'>
-          <div className='modal-content'>
-            <div className='modal-header bg-success bg-opacity-10 text-success py-3'>
-              <h3
-                className='modal-title fs-6 text-center'
-                id='exampleModalLabel'
-              >
+        <div className='modal-dialog modal-lg modal-dialog-centered align-items-end align-items-sm-center mx-0 mx-sm-auto mt-4 mt-sm-2'>
+          <div className='modal-content '>
+            <div className='modal-header bg-success bg-opacity-10 text-success py-3 d-none d-lg-flex'>
+              <h3 className='modal-title fs-6 text-center' id='loginModalLabel'>
                 Let's learn, share & inspire each other with our passion for
                 computer engineering. Sign up now 🤘🏼
               </h3>
@@ -34,7 +31,18 @@ const LoginModal = () => {
               <div className='row mt-1'>
                 {/* Login Form */}
                 <div className='px-3 col ms-2'>
-                  <h2 className='fw-bold fs-4 mb-4 ms-1'>Create Account</h2>
+                  <h2 className='fw-bold fs-4 mb-4 ms-1 d-flex justify-content-between align-items-center'>
+                    <p className='mb-0'>Create an account</p>
+                    <div>
+                      <button
+                        type='button'
+                        className='btn-close text-white bg-secondary rounded-5'
+                        data-bs-dismiss='modal'
+                        aria-label='Close'
+                        style={{ fontSize: "10px", padding: "6px" }}
+                      ></button>
+                    </div>
+                  </h2>
                   <div className='row mx-1'>
                     <div className='col pe-0 ps-0 d-flex border rounded-top'>
                       <input
@@ -69,8 +77,13 @@ const LoginModal = () => {
                       aria-label='Confirm Password'
                     />
                   </div>
-                  <div className='btn btn-primary rounded-5 d-flex justify-content-center mt-3 mb-4 mx-1 fw-semibold py-2'>
-                    Create Account
+                  <div className='d-flex align-items-center justify-content-between'>
+                    <div className='btn btn-primary rounded-5 d-flex justify-content-center mt-3 mb-4 mx-1 fw-semibold py-2 px-5'>
+                      Create Account
+                    </div>
+                    <button className='fw-semibold text-muted cursor-pointer border-0 bg-white'>
+                      <u>or, Sign In</u>
+                    </button>
                   </div>
                   <div className='btn btn-light border rounded-1 d-flex justify-content-center align-items-center mt-3 mb-2 mx-1 fw-semibold py-2'>
                     <img className='h-75 me-2' src={fb} alt='' />
@@ -82,7 +95,7 @@ const LoginModal = () => {
                   </div>
                 </div>
                 {/* Login Image */}
-                <div className='col d-flex flex-column align-items-center me-2'>
+                <div className='col d-none flex-column align-items-center me-2 d-lg-flex'>
                   <p className='text-right'>
                     Already have an account?
                     <span className='text-primary fw-semibold'> Sign In</span>
