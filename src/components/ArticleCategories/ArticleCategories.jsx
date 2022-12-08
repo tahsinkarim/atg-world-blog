@@ -1,10 +1,11 @@
 import React from "react";
+import down from "../../assets/images/arrow-down.png";
 import join from "../../assets/images/join.png";
 
 const ArticleCategories = () => {
   return (
-    <div>
-      <div className='container d-flex justify-content-between align-items-center py-3'>
+    <div className='pt-4 sticky-top bg-white'>
+      <div className='container d-flex justify-content-between align-items-center py-3 d-md-none'>
         <p className='fw-bold mb-0'>POSTS(368)</p>
         <div className='dropdown'>
           <button
@@ -39,7 +40,7 @@ const ArticleCategories = () => {
           </ul>
         </div>
       </div>
-      <div className='d-flex container align-items-center justify-content-between'>
+      <div className='d-md-flex container align-items-center justify-content-between d-none'>
         <div className='d-flex gap-3 text-muted fw-semibold mb-0'>
           <p className='text-black mb-0'>All Posts (32)</p>
           <p className='mb-0'>Article</p>
@@ -54,7 +55,9 @@ const ArticleCategories = () => {
               className='btn btn-light me-4 fw-semibold'
             >
               Make a Post
-              <span></span>
+              <span>
+                <img src={down} alt='' />
+              </span>
             </button>
             <button
               style={{ whiteSpace: "nowrap" }}
@@ -66,6 +69,7 @@ const ArticleCategories = () => {
           </div>
         </div>
       </div>
+      <hr className='container d-none d-md-block pb-2'></hr>
     </div>
   );
 };

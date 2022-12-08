@@ -1,4 +1,5 @@
 import React from "react";
+import down from "../../assets/images/arrow-down.png";
 import logo from "../../assets/images/logo.png";
 import LoginModal from "../Login/LoginModal";
 import RegisterModal from "../Login/RegisterModal";
@@ -41,6 +42,9 @@ const Navbar = () => {
               data-bs-target='#registerModal'
             >
               Create account. <span className='text-primary'>It's free</span>
+              <span>
+                <img src={down} alt='' />
+              </span>
             </p>
           </div>
         </div>
