@@ -1,25 +1,25 @@
 import React from "react";
-import hand from "../../assets/images/article-hand.png";
-import img1 from "../../assets/images/article1.png";
+import bag1 from "../../assets/images/bag-1.png";
+import bag from "../../assets/images/bag.png";
 import dots from "../../assets/images/dots.png";
 import eye from "../../assets/images/eye.png";
+import location from "../../assets/images/location.png";
 import share from "../../assets/images/share-icon.png";
-import user1 from "../../assets/images/user1.png";
+import user4 from "../../assets/images/user4.png";
 
-const ArticleCard = () => {
+const JobCard = () => {
   return (
     <div className='mx-auto shadow-sm' style={{ maxWidth: "690px" }}>
       <div className='card mb-3'>
-        <img src={img1} className='card-img-top' alt='...' />
         <div className='card-body'>
           <h5 className='card-title d-flex align-items-center fs-6 gap-2 mb-3'>
-            <img src={hand} alt='' />
-            <span>Article</span>
+            <img src={bag1} alt='' />
+            <span>Job</span>
           </h5>
           <div className='d-flex justify-content-between align-items-center'>
-            <h3 className='card-title d-flex fs-5 me-3'>
-              What if famous brands had regular fonts? Meet RegulaBrands!
-            </h3>
+            <h5 className='card-title d-flex fw-semibold me-3'>
+              Finance & Investment Elite Social Mixer @Lujiazui
+            </h5>
             <div className='dropdown'>
               <img
                 className='dropdown-toggle'
@@ -49,15 +49,30 @@ const ArticleCard = () => {
               </ul>
             </div>
           </div>
-          <p className='card-text text-muted'>
-            I've worked in UX for the better part of a decade. From now on, I
-            plan to rei…
-          </p>
+          <div className='fw-bold d-flex gap-5 mt-1'>
+            <div className='d-flex align-items-center'>
+              <img src={bag} alt='' />
+              <p className='mb-0 ms-2'>
+                <small>Innovaccer Analytics Private Ltd.</small>
+              </p>
+            </div>
+            <div className='d-flex align-items-center'>
+              <img src={location} alt='' />
+              <p className='mb-0 ms-2'>
+                <small>Noida, India</small>
+              </p>
+            </div>
+          </div>
+          <div className='my-3'>
+            <button className='btn btn-light text-success fw-semibold w-100 border'>
+              Apply on Timesjobs
+            </button>
+          </div>
           <div className='card-text d-flex align-items-center justify-content-between py-2'>
             <div className='d-flex align-items-center'>
-              <img src={user1} alt='' />
+              <img src={user4} alt='' />
               <div className='ms-3'>
-                <p className='fw-bolder mb-0'>Sarthak Kamra</p>
+                <p className='fw-bolder mb-0'>Joseph Gray</p>
                 <div className='d-flex d-sm-none'>
                   <div>
                     <img src={eye} alt='' />
@@ -89,4 +104,4 @@ const ArticleCard = () => {
   );
 };
 
-export default ArticleCard;
+export default JobCard;

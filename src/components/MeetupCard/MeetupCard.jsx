@@ -18,7 +18,7 @@ const MeetupCard = () => {
             <img src={calendar} alt='' />
             <span>Meetup</span>
           </h5>
-          <div className='d-flex justify-content-between align-items-center'>
+          <div className='d-flex justify-content-between align-items-center mb-3'>
             <h5 className='card-title d-flex fw-semibold me-3'>
               Finance & Investment Elite Social Mixer @Lujiazui
             </h5>
@@ -74,7 +74,7 @@ const MeetupCard = () => {
             <div className='d-flex align-items-center'>
               <img src={user3} alt='' />
               <div className='ms-3'>
-                <p className='fw-bolder mb-0'>Sarah West</p>
+                <p className='fw-bolder mb-0'>Ronal Jones</p>
                 <div className='d-flex d-sm-none'>
                   <div>
                     <img src={eye} alt='' />

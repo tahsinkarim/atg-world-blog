@@ -16,7 +16,7 @@ const EducationCard = () => {
             <img src={hand} alt='' />
             <span>Education</span>
           </h5>
-          <div className='d-flex justify-content-between align-items-center'>
+          <div className='d-flex justify-content-between align-items-center mb-3'>
             <h5 className='card-title d-flex fw-semibold me-3'>
               Tax Benefits for Investment under National Pension Scheme launched
               by Government
