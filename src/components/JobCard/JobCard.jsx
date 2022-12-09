@@ -64,7 +64,10 @@ const JobCard = () => {
             </div>
           </div>
           <div className='my-3'>
-            <button className='btn btn-light text-success fw-semibold w-100 border'>
+            <button
+              style={{ color: "#02B875" }}
+              className='btn btn-light fw-semibold w-100 border'
+            >
               Apply on Timesjobs
             </button>
           </div>

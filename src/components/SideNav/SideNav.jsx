@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import info from "../../assets/images/info-icon.png";
+import { AuthContext } from "../../contexts/AuthProvider";
 import LocationSection from "./LocationSection";
 import RecommendedGroups from "./RecommendedGroups";
 
 const SideNav = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <div className='col-4 ps-5 d-none d-lg-block'>
       <div className='sticky-top pt-5'>
@@ -16,7 +19,8 @@ const SideNav = () => {
           Your location will help us serve better and extend a personalised
           experience.
         </div>
-        <RecommendedGroups></RecommendedGroups>
+
+        {user && <RecommendedGroups></RecommendedGroups>}
       </div>
     </div>
   );

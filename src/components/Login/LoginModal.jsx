@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import fb from "../../assets/images/fb-logo.png";
 import google from "../../assets/images/gmail-logo.png";
 import login from "../../assets/images/login-img.png";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 const LoginModal = () => {
+  const { toggleUser } = useContext(AuthContext);
   return (
     <div>
       <div
@@ -57,8 +59,11 @@ const LoginModal = () => {
                       aria-label='Password'
                     />
                   </div>
-                  <div className='d-flex d-sm-block align-items-center justify-content-between'>
-                    <div className='btn btn-primary rounded-5 d-flex justify-content-center mt-4 mb-4 mx-1 fw-semibold py-2 px-5'>
+                  <div className='d-flex d-lg-block align-items-center justify-content-between'>
+                    <div
+                      onClick={() => toggleUser()}
+                      className='btn btn-primary rounded-5 d-flex justify-content-center mt-4 mb-4 mx-1 fw-semibold py-2 px-5'
+                    >
                       Sign In
                     </div>
                     <button

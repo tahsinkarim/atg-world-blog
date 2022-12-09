@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import down from "../../assets/images/arrow-down.png";
-import join from "../../assets/images/join.png";
+import joinImg from "../../assets/images/join.png";
+import leaveImg from "../../assets/images/leaveImg.png";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 const ArticleCategories = () => {
+  const { join, toggleJoin } = useContext(AuthContext);
   return (
     <div className='pt-4 sticky-top bg-white'>
       <div className='container d-flex justify-content-between align-items-center py-3 d-md-none'>
@@ -59,13 +62,25 @@ const ArticleCategories = () => {
                 <img src={down} alt='' />
               </span>
             </button>
-            <button
-              style={{ whiteSpace: "nowrap" }}
-              className='btn btn-primary d-flex align-items-center'
-            >
-              <img className='me-2' src={join} alt='' />
-              Join group
-            </button>
+            {join ? (
+              <button
+                onClick={() => toggleJoin()}
+                style={{ whiteSpace: "nowrap" }}
+                className='btn btn-light d-flex align-items-center'
+              >
+                <img className='me-2' src={leaveImg} alt='' />
+                Leave Group
+              </button>
+            ) : (
+              <button
+                onClick={() => toggleJoin()}
+                style={{ whiteSpace: "nowrap" }}
+                className='btn btn-primary d-flex align-items-center'
+              >
+                <img className='me-2' src={joinImg} alt='' />
+                Join group
+              </button>
+            )}
           </div>
         </div>
       </div>

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import fb from "../../assets/images/fb-logo.png";
 import google from "../../assets/images/gmail-logo.png";
 import login from "../../assets/images/login-img.png";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 const RegisterModal = () => {
+  const { toggleUser } = useContext(AuthContext);
+
   return (
     <div>
       <div
@@ -80,15 +83,18 @@ const RegisterModal = () => {
                       aria-label='Confirm Password'
                     />
                   </div>
-                  <div className='d-flex d-sm-block align-items-center justify-content-between'>
-                    <div className='btn btn-primary rounded-5 d-flex justify-content-center mt-3 mb-4 mx-1 fw-semibold py-2 px-5'>
+                  <div className='d-flex d-lg-block align-items-center justify-content-between'>
+                    <div
+                      onClick={() => toggleUser()}
+                      className='btn btn-primary rounded-5 d-flex justify-content-center mt-3 mb-4 mx-1 fw-semibold py-2 px-5'
+                    >
                       Create Account
                     </div>
                     <button
                       type='button'
                       data-bs-toggle='modal'
                       data-bs-target='#loginModal'
-                      className='fw-semibold text-muted cursor-pointer border-0 bg-white d-sm-none'
+                      className='fw-semibold text-muted cursor-pointer border-0 bg-white d-lg-none'
                     >
                       <u>or, Sign In</u>
                     </button>

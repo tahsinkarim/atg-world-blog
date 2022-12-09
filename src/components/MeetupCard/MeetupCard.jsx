@@ -66,7 +66,10 @@ const MeetupCard = () => {
             </div>
           </div>
           <div className='my-3'>
-            <button className='btn btn-light text-danger fw-semibold w-100 border'>
+            <button
+              className='btn btn-light fw-semibold w-100 border'
+              style={{ color: "#E56135" }}
+            >
               Visit Website
             </button>
           </div>
